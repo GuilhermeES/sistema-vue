@@ -1,24 +1,16 @@
-# sistema-vue
+# Informações
+Esse é um projeto pra eu colocar em prática alguns conhecimentos, usando principalmente Vuejs e simulando uma API em um arquivo JSON.
+Algumas dependencies que estou usando
 
-## Project setup
-```
-npm install
-```
+- Vuejs
+- Vuex
+- Vue router
+- Axios
 
-### Compiles and hot-reloads for development
+Para rodar o arquivo json execute
 ```
-npm run serve
+- npm install json-server
+- cd db
+- json-server --watch users.json
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Em um futuro não tão distante vou passar para NodeJS.
