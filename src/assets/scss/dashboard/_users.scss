@@ -1,0 +1,183 @@
+.pre-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 20px;
+    div:nth-child(2){
+        justify-self: center;
+    }
+    input{
+        background: #EEF1F5;
+        border: none;
+        height: 40px;
+        padding-left: 40px;
+        border-radius: 40px;
+        width: 50%;
+        font-size: 15px;
+        outline: none;
+    }
+    svg{
+        position: relative;
+        left: 34px;
+        color: #ffbb12;
+    }
+    button{
+        width: 120px;
+        height: 40px;
+        margin-left: 20px;
+    }
+}
+.text-geral{
+    padding-bottom: 20px;
+    .border{
+        border-left: 4px solid #ffbd14;
+    }
+    h1{
+        margin-left: 10px;
+    }
+}
+.cards-geral{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    padding-bottom: 20px;
+    .card{
+        width: 70%;
+        background-color: $primary;
+        height: auto;
+        border-radius: 10px;
+        div{
+            padding:1rem;
+            h1{
+                color: white;
+            }
+        }
+    }
+}
+.list-users{
+    padding-top: 50px;
+    .user{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        div{
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+        }
+        button{
+            width: 90px;
+            display: flex;
+            height: 35px;
+            padding: 8px;
+            font-size: 15px;
+        }
+        svg{
+            margin-left: 10px;
+        }
+        .dropdown-user{
+            width: 180px;
+            height: 86px;
+            transform: translate3d(-43px, 63px, 0px);
+            z-index: 9;
+            position: absolute;
+            background: $primary;
+            opacity: 1;
+            .dropdown-user-itens{
+                display: block;
+            }
+            .router-link-active{
+                box-shadow: unset;
+            }
+        
+        }
+    }
+}
+.excluir{
+    cursor: pointer;
+}
+.excluir:hover{
+    opacity: 0.5;
+}
+.zero{
+    color: red;
+}
+.one{
+    color: #2bc51c;
+}
+
+/*PÁGINA NOVO USUARIO-----------------------------------------------------------------------*/
+.new-user-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    div:nth-child(2){
+        direction: rtl;
+    }
+}
+.novo-usuario{
+    input{
+        padding-left: 15px;
+        height: 60px;
+    }
+    button{
+        width: 20%;
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: $muted;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $muted;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

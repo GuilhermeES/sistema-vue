@@ -1,0 +1,35 @@
+@media(max-width:576px){
+    .start-content{
+        margin-left: unset !important;
+    }
+    .sidebar{
+        left: -300px;
+    }
+    .cards-geral{
+        grid-template-columns: 1fr;
+        .card{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    .list-users{
+        .user{
+            grid-template-columns: 1fr;
+            padding-bottom: 3rem;
+        }
+    } 
+    .new-user-content{
+        grid-template-columns: 1fr;
+        input{
+            padding-left: unset;
+        }
+        img{
+            width: 100%;
+        }
+        .novo-usuario{
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
