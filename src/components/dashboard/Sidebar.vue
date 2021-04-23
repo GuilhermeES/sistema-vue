@@ -21,6 +21,14 @@
                             </div>
                         </router-link>
                     </li>
+                    <li>
+                        <router-link to="/agenda">
+                            <div class="itens">
+                                <i class="far fa-calendar-alt"></i>
+                                <strong>Agenda</strong>
+                            </div>
+                        </router-link>
+                    </li>
                 </ul>
             </div>
             <div class="sidebar-footer">

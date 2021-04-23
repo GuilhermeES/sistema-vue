@@ -23,9 +23,6 @@ export default{
       DELETE_USER(state, id){
         state.users = state.users.filter(user => user.id !== id)
       },
-      SEARCH_USER(state, name){
-        state.users = state.users.name.includes(name.name)
-      }
     },
     actions: {
       getUsers({ commit }) {
@@ -119,20 +116,10 @@ export default{
           }
         })
       },
-      searchName({commit}, name){
-        commit('SET_STATUS', true)
-          this.$axios.get(`?name=${name}`, {})
-          .then(response => {
-            commit('SEARCH_USER', response.data.name);
-            commit('SET_STATUS', false)
-          })
-      }
     },
     getters:{   
      totalUser: state => { return state.users.length },
       userAtivo: state => { return state.users.filter(ativo => ativo.status) },
-     
-      //total: state => {return state.users.map(a => parseFloat(a.money)).reduce((a,b)=>a+b)},
     },
   }
   

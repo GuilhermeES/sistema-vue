@@ -23,17 +23,9 @@
                 <div class="card">
                     <div>
                         <p class="text-muted">
-                            Usários ativos
+                            Usuários ativos
                         </p>
                         <h1>{{userAtivo.length}}</h1>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <p class="text-muted">
-                            Total
-                        </p>
-                        <h1>{{ }}</h1>
                     </div>
                 </div>
             </div>
@@ -42,7 +34,6 @@
                  <div>
                     <i class="fas fa-search"></i>
                     <input type="text" v-model="search"  placeholder="Pesquise por nome...">
-                    <button class="btn-primary" @click="pesquisa()">Pesquisar</button>
                  </div>
                  <div>
                     <router-link to="usuarios/novo">
@@ -51,7 +42,7 @@
                  </div>
             </div>
             <div class="list-users">
-                <div class="user" v-for="user in pageOfItems" :key="user.id">
+                <div class="user" v-for="user in filter" :key="user.id">
                     <div class="user">
                         <img src="@/assets/userlist.jpg" width="70">
                     </div>
@@ -77,7 +68,6 @@
                     </div>
                 </div>
             </div>   
-            <jw-pagination :items="users" @changePage="onChangePage" :labels="customLabels" :pageSize="7"></jw-pagination>
         </div>
     </div>
 </template>
@@ -86,19 +76,11 @@
 import { mapGetters, mapState, mapActions } from 'vuex'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 
-const customLabels = {
-    first: 'Primeira',
-    last: 'Última',
-    previous: 'Anterior',
-    next: 'Próxima'
-};
 
 export default{
     data() {
         return {
-            pageOfItems: [],
             search: '',
-            customLabels
         };
     },
     components: {
@@ -113,25 +95,22 @@ export default{
        ...mapGetters('users',[
             'totalUser',
             'userAtivo',
+            'total'
         ]), 
+        filter(){
+            return this.users.filter((user) =>{ return user.name.toLowerCase().match(this.search.toLowerCase())})
+        }
     },
         
-    created() {
-        this.$store.dispatch("users/getUsers");
-    },
+    //created() {
+    //    this.$store.dispatch("users/getUsers");
+    //},
     
     methods: {
         ...mapActions('users', [
             'deleteUser',
             'searchName'
         ]),
-        pesquisa() {
-            this.searchName(this.search);
-        },
-        onChangePage(pageOfItems) {
-            this.pageOfItems = pageOfItems;
-        }
     },
-
 }
 </script>

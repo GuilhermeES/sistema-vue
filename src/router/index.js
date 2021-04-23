@@ -24,6 +24,9 @@ const routes = [
         path: '/usuario/:id', name: 'usuario.editar', component: () => import('../views/dashboard/users/Editar.vue'),
       },
       {
+        path: '/agenda', name: 'agenda', component: () => import('../views/dashboard/agenda/Agenda.vue'),
+      },
+      {
         path: '/', name: 'index', component: () => import('../views/dashboard/Index.vue'),
       }
     ]

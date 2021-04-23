@@ -11,9 +11,6 @@ import '@/assets/scss/global.scss'
 import VueAxios from './plugins/axios'
 Vue.use(VueAxios)
 
-import JwPagination from 'jw-vue-pagination';
-Vue.component('jw-pagination', JwPagination);
-
 import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2)
 
