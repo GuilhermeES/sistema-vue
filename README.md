@@ -13,4 +13,3 @@ Para rodar o arquivo json execute
 - cd db
 - json-server --watch users.json
 ```
-Em um futuro não tão distante vou passar para NodeJS.
