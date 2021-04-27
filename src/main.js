@@ -14,11 +14,6 @@ Vue.use(VueAxios)
 import VueSweetalert2 from 'vue-sweetalert2';
 Vue.use(VueSweetalert2)
 
-import VueApexCharts from 'vue-apexcharts'
-Vue.use(VueApexCharts)
-
-Vue.component('apexchart', VueApexCharts)
-
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 

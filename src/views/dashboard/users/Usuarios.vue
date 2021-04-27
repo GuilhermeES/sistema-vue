@@ -102,9 +102,9 @@ export default{
         }
     },
         
-    //created() {
-    //    this.$store.dispatch("users/getUsers");
-    //},
+    created() {
+      this.$store.dispatch("users/getUsers");
+    },
     
     methods: {
         ...mapActions('users', [

@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import users from './modules/users'
-import auth from './modules/auth'
-
 
 import { axios } from '@/plugins/axios'
 
@@ -15,6 +13,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   plugins: [axiosPlugin],
-  modules:{users,auth}
+  modules:{users}
 })
 

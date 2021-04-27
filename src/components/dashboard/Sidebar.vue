@@ -1,18 +1,10 @@
 <template>
         <div class="sidebar">
             <div class="logo">
-                LOGO
+                
             </div>
             <div class="menu-itens">
                 <ul>
-                    <li>
-                        <router-link to="/dashboard">
-                            <div class="itens">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <strong>Dashboard</strong>
-                            </div>
-                        </router-link>
-                    </li>
                      <li>
                         <router-link to="/usuarios">
                             <div class="itens">
@@ -21,20 +13,7 @@
                             </div>
                         </router-link>
                     </li>
-                    <li>
-                        <router-link to="/agenda">
-                            <div class="itens">
-                                <i class="far fa-calendar-alt"></i>
-                                <strong>Agenda</strong>
-                            </div>
-                        </router-link>
-                    </li>
                 </ul>
-            </div>
-            <div class="sidebar-footer">
-                <router-link to="/sobre">
-                    <strong>Sobre</strong>
-                </router-link>
             </div>
         </div>
 </template>
