@@ -2,7 +2,6 @@
 
 @import 'variables';
 @import 'containers';
-@import 'auth/auth';
 @import 'padding_margin';
 @import 'dashboard/sidebar';
 @import 'dashboard/users';
@@ -82,15 +81,4 @@ input{
 
 .v-pulse.v-pulse1, .v-pulse.v-pulse2, .v-pulse.v-pulse3{
     background-color: $muted !important;
-}
-.pagination {
-    padding-top: 20px !important;
-}
-.pagination li.page-number.active {
-    color: $muted;
-    font-weight: bold;
-}
-
-.pagination li a{
-    border: 1px solid #dee2e6;
 }
